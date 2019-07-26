@@ -7,11 +7,16 @@ import shouye from '@/components/shouye'
 import car from '@/components/car'
 import huiyuan from '@/components/huiyuan'
 import search from '@/components/search'
+import newlist from '@/components/newlist'
+import newitem from '@/components/newitem'
+
+
+
 export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/shouye'
+      redirect: '/shouye/newlist'
     },
     {
       path:'/car',
@@ -28,6 +33,14 @@ export default new Router({
     {
       path:'/search',
       component:search
+    },
+    {
+      path:'/shouye/newlist',
+      component:newlist
+    },
+    {
+      path:'/shouye/newitem',
+      component:newitem
     },
   ],
   linkActiveClass:'mui-active'

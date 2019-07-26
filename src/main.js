@@ -14,6 +14,21 @@ import './lib/mui/fonts/mui-icons-extra.ttf'
 import { Swipe, SwipeItem } from 'mint-ui';
 import  VueResource  from 'vue-resource'
 Vue.use(VueResource) 
+
+Vue.http.options.root='http://www.liulongbin.top:3005'
+
+// 导入时间插件
+import moment from 'moment'
+// 定义全局的过滤器、
+
+Vue.filter('dateFormat',function(dataStr,pattern="YYYY-MM-DD HH:mm:ss"){
+return moment(dataStr).format(pattern)
+
+})
+
+
+
+
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 /* eslint-disable no-new */

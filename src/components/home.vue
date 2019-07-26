@@ -64,7 +64,7 @@ tabbar
 
 </script>
 <style >
-.body{padding-top: 40px;background-color: #ffffff ;overflow-x: hidden}
+.body{padding-top: 40px;background-color: #ffffff ;overflow-x: hidden;padding-bottom: 50px;}
 body{ background-color: #ffffff;}
 .v-enter
 {
