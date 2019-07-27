@@ -9,8 +9,8 @@ import huiyuan from '@/components/huiyuan'
 import search from '@/components/search'
 import newlist from '@/components/newlist'
 import newitem from '@/components/newitem'
-
-
+import photolist from '@/components/photolist'
+import photoitem from '@/components/photoitem'
 
 export default new Router({
   routes: [
@@ -41,6 +41,14 @@ export default new Router({
     {
       path:'/shouye/newitem',
       component:newitem
+    },
+    {
+      path:'/shouye/photolist',
+      component:photolist
+    },
+    {
+      path:'/shouye/photoitem/:id',
+      component:photoitem
     },
   ],
   linkActiveClass:'mui-active'
