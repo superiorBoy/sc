@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "mint-ui": "^2.2.13",
+    "moment": "^2.24.0",
     "vue": "^2.5.2",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.0.1"
@@ -68,5 +69,18 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "main": ".postcssrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superiorBoy/sc.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/superiorBoy/sc/issues"
+  },
+  "homepage": "https://github.com/superiorBoy/sc#readme"
 }

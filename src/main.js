@@ -16,7 +16,7 @@ import  VueResource  from 'vue-resource'
 Vue.use(VueResource) 
 
 Vue.http.options.root='http://www.liulongbin.top:3005'
-
+Vue.http.options.emulateJSON = true;
 // 导入时间插件
 import moment from 'moment'
 // 定义全局的过滤器、
