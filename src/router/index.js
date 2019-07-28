@@ -11,12 +11,15 @@ import newlist from '@/components/newlist'
 import newitem from '@/components/newitem'
 import photolist from '@/components/photolist'
 import photoitem from '@/components/photoitem'
+import shoplist from '@/components/shoplist'
+import shipin from '@/components/shipin'
+import shopitem from '@/components/shopitem'
 
 export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/shouye/newlist'
+      redirect: '/shouye'
     },
     {
       path:'/car',
@@ -49,6 +52,18 @@ export default new Router({
     {
       path:'/shouye/photoitem/:id',
       component:photoitem
+    },
+    {
+      path:'/shouye/shoplist',
+      component:shoplist
+    },
+    {
+      path:'/shouye/shipin',
+      component:shipin
+    },
+    {
+      path:'/shouye/shopitem/:id',
+      component:shopitem
     },
   ],
   linkActiveClass:'mui-active'

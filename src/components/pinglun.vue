@@ -12,7 +12,7 @@
 <p class="pingtitle"> <span>第{{i+1}}楼</span>&nbsp;&nbsp;&nbsp; <span>用户：{{item.user_name}}</span>&nbsp;&nbsp; <span>发表时间:{{item.add_time |dateFormat}}</span></p>
 
 <div class="pingboody">
-{{item.content===''?'这个小垃圾啥都没有说':item.content}}
+{{item.content===''||item.content=="undefined"?'这个小垃圾啥都没有说':item.content}}
 </div>
 </div>
 
