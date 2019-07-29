@@ -14,6 +14,8 @@ import photoitem from '@/components/photoitem'
 import shoplist from '@/components/shoplist'
 import shipin from '@/components/shipin'
 import shopitem from '@/components/shopitem'
+import shopping from '@/components/shopping'
+import shoptuwen from '@/components/shoptuwen'
 
 export default new Router({
   routes: [
@@ -65,6 +67,17 @@ export default new Router({
       path:'/shouye/shopitem/:id',
       component:shopitem
     },
+    {
+      path:'/shouye/shoptuwen/:id',
+      component:shoptuwen,
+      name:'shoptuwen'
+    },
+    {
+      path:'/shouye/shopping/:id',
+      component:shopping,
+      name:'shopping'
+    },
+  
   ],
   linkActiveClass:'mui-active'
 

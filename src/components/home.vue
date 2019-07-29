@@ -1,8 +1,12 @@
 <template >
     <div class="body">
 
-<mt-header fixed title="我的商城"></mt-header>
 
+   <mt-header fixed title="我的">
+            <router-link v-show="isBack" to slot="left" >
+                <mt-button icon="back" @click="prevWeb">返回</mt-button>
+            </router-link>
+        </mt-header>
 
 
 <!-- 点击切换区域 -->
@@ -50,14 +54,23 @@ data() {
     }
 },
 methods: {
-
+  prevWeb() {
+                this.$router.go(-1);
+            }
 },
 created() {
 
 },
 components:{
 tabbar
-}
+},
+     computed: {
+            // 顶部的浏览器是否返回
+            isBack() {
+                // 如果路由地址不是 /home 就出现返回按钮
+                return this.$route.path != "/shouye";
+            }
+        }
 
 
 })

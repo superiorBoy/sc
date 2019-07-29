@@ -21,6 +21,7 @@ Vue.use(VueResource)
 import VuePreview from 'vue-preview'
 
 Vue.use(VuePreview)
+
 Vue.http.options.root='http://www.liulongbin.top:3005'
 Vue.http.options.emulateJSON = true;
 // 导入时间插件
