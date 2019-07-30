@@ -1,5 +1,5 @@
 <template >
-    <div class="body">
+    <div class="bodyhome">
 
 
    <mt-header fixed title="我的">
@@ -33,7 +33,7 @@
 				<span class="mui-tab-label">会员</span>
 			</router-link>
 			<router-link class="mui-tab-item-add" to="/car">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">0</span></span>
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge" id ='badge'>{{$store.getters.getallcount}}</span></span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link class="mui-tab-item-add" to="/search">
@@ -77,7 +77,7 @@ tabbar
 
 </script>
 <style  >
-.body{padding-top: 40px;background-color: #ffffff ;overflow-x: hidden;padding-bottom: 50px;}
+.bodyhome{padding-top: 40px;background-color: #ffffff ;overflow-x: hidden;padding-bottom: 50px;}
 body{ background-color: #ffffff;}
 .v-enter
 {
