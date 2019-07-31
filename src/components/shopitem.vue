@@ -92,10 +92,12 @@ export default {
 
 getlunbo(){
     this.$http.get('api/getthumimages/'+this.id).then(result=>{
-this.lunbolist=result.body.message
-        console.log(result.body)
-    })
+                  this.lunbolist=result.body.message
+                 console.log(result.body)
+           })
 },
+
+
 getcanshu(){
     this.$http.get('api/goods/getinfo/'+this.id).then(res=>{
 
@@ -174,6 +176,8 @@ this.$store.commit('addToCar',goodsinfo)
   },
   mounted() {
     mui(".mui-numbox").numbox();
+
+
   },
 };
 </script>

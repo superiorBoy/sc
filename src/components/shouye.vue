@@ -79,6 +79,7 @@ if(result.body.status==0){
   this.lunbotulist=result.body.message
 
 }else{
+    
     this.$toast('加载失败');
 }
 

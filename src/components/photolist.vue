@@ -38,8 +38,7 @@
 </template>
 <script>
 import mui from "../lib/mui/js/mui";
-// import { Lazyload } from 'mint-ui';
-  
+
 export default {
   data() {
     return {
