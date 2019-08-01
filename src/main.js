@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import home from './components/home'
 import router from './router'
-import './lib/mui/css/mui.min.css'
+import './lib/mui/css/mui.css'
 
 import Mint from 'mint-ui';
 Vue.use(Mint);
@@ -68,9 +68,43 @@ state.car.push(goodsinfo)
 //当更新car之后，把car数组存储到本地的localStorage中()将对象、数组转换成字符串
 localStorage.setItem('car',JSON.stringify(state.car))
 
+},
+//修改加减购物车中商品的数量
+updatagoodscount(state,goodsinfo){
+  state.car.some(item=>{
+if(item.id==goodsinfo.id){
+  item.count=parseInt(goodsinfo.count)
+  return true
 }
 
+  })
+//当修改完商品的数量，把最新的数量保存到本地存储
+localStorage.setItem('car',JSON.stringify(state.car))
+},
+//删除本地存储中的数据
+removefromcar(state,id){
+// 根据id从state中的购物车对应的那条商品数据、
+state.car.some((item,i)=>{
+  if(item.id==id){
+    state.car.splice(i,1)
+    return true
+  }
+})
+//删除完毕后的数据，更新到本地存储
+localStorage.setItem('car',JSON.stringify(state.car))
+},
+updatagoodsselected(state,info){
+  state.car.some(item=>{
+if(item.id==info.id){
 
+item.selected=info.selected
+
+}
+
+  })
+//状态保存到本地存储
+localStorage.setItem('car',JSON.stringify(state.car))
+},
 
 },
 getters:{
@@ -82,9 +116,50 @@ getallcount(state){
     c+=item.count
   })
   return c
-}
+},
 
+getgoodscount(state){
+
+var o={}
+
+state.car.forEach(item=>{
+  o[item.id]=item.count
+})
+return o
+},
+//商品选中
+getgoodsselected(state){
+
+  var o={}
+  
+  state.car.forEach(item=>{
+    o[item.id]=item.selected
+  })
+  return o
+  },
+
+  //计算总价
+  getgoodszonghe(state){
+var o={
+  count:0,
+  amout:0
 }
+state.car.forEach(item=>{
+  if(item.selected){
+    o.count+=item.count
+    o.amout+=item.price*item.count
+  }
+})
+return o
+
+  }
+ 
+
+
+},
+
+
+
 
 
 })

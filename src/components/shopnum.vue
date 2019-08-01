@@ -2,7 +2,7 @@
     <div>
                 <div class="mui-numbox" data-numbox-min='1' >
 					<button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
-					<input id="test" class="mui-input-numbox" type="number" value="1"ref="numbox">
+					<input id="test" class="mui-input-numbox" type="number" :value="initcount"ref="numbox" @change='changeed' readonly>
 					<button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
 				</div>
 
@@ -19,11 +19,24 @@ export default {
         }
     },
     methods:{
-   
+   changeed(){
+       console.log(this.$refs.numbox.value)
+this.$store.commit('updatagoodscount',{
+
+ id:this.goodsid,
+ count:this.$refs.numbox.value
+
+})
+
+
+   }
     },
  mounted() {
        mui(".mui-numbox").numbox();
  },
+ props:[
+    'initcount','goodsid'
+ ]
 
 }
 </script>
