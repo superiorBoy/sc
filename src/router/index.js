@@ -16,7 +16,8 @@ import shipin from '@/components/shipin'
 import shopitem from '@/components/shopitem'
 import shopping from '@/components/shopping'
 import shoptuwen from '@/components/shoptuwen'
-
+import tianqi from '@/components/tianqi'
+import duanzi from '@/components/duanzi'
 export default new Router({
   routes: [
     {
@@ -77,7 +78,16 @@ export default new Router({
       component:shopping,
       name:'shopping'
     },
-  
+    {
+      path:'/shouye/tianqi',
+      component:tianqi
+
+    },
+    {
+      path:'/shouye/duanzi',
+      component:duanzi
+
+    },
   ],
   linkActiveClass:'mui-active'
 

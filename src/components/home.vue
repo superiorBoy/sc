@@ -30,7 +30,7 @@
 			</router-link>
 			<router-link class="mui-tab-item-add" to="/huiyuan">
 				<span class="mui-icon mui-icon-contact"></span>
-				<span class="mui-tab-label">会员</span>
+				<span class="mui-tab-label">昵称</span>
 			</router-link>
 			<router-link class="mui-tab-item-add" to="/car">
 				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge" id ='badge'>{{$store.getters.getallcount}}</span></span>
@@ -38,7 +38,7 @@
 			</router-link>
 			<router-link class="mui-tab-item-add" to="/search">
 				<span class="mui-icon mui-icon-search"></span>
-				<span class="mui-tab-label">搜索</span>
+				<span class="mui-tab-label">搜索音乐</span>
 			</router-link>
 		</nav>
 

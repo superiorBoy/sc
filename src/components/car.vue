@@ -40,7 +40,7 @@
 </div>
 
 <div class="right">
-<button type="button" class="mui-btn mui-btn-danger">去结算</button>
+<button type="button" class="mui-btn mui-btn-danger" @click="jiesuan">去结算</button>
 </div>
 
         </div>
@@ -96,19 +96,22 @@ remove(id ,index){
 this.goodlist.splice(index,1);
 this.$store.commit('removefromcar',id)
 
-if(this.getgoodlist.length<=0){
+if(this.$store.state.car.length<=0){
    this.$toast('暂无商品');
            this.xianshi=false;
 }
 
 
-
+// console.log(this.$store.state.car.length)
 },
 selectedchanged(id,val){
 
 //每当点击后开关，把最新的开关状态同步到store中
 // console.log(id + '------'+ val)
 this.$store.commit('updatagoodsselected',{id,selected:val})
+},
+jiesuan(){
+  this.$toast('余额不足')
 }
 
 
