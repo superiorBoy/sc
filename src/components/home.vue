@@ -6,6 +6,7 @@
             <router-link v-show="isBack" to slot="left" >
                 <mt-button icon="back" @click="prevWeb">返回</mt-button>
             </router-link>
+   
         </mt-header>
 
 
@@ -22,15 +23,19 @@
 
 
 
+             <audio src="http://m10.music.126.net/20190814163658/c912d20b68f13b0b9da6966189ff2c5e/ymusic/1ac2/3092/378f/bdcc56e491d666c393b9d38281466750.mp3" controls="controls" autoplay="autoplay":style="{width:'0',position:'fixed',width:'30px',height:'30px',right:'0',bottom:'74px'}">
+Your browser does not support the audio element.
+</audio>
 
 	<nav class="mui-bar mui-bar-tab">
+   
 			<router-link  class="mui-tab-item-add " to="/shouye">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>
 			</router-link>
-			<router-link class="mui-tab-item-add" to="/huiyuan">
+			<router-link class="mui-tab-item-add" to="/tupian">
 				<span class="mui-icon mui-icon-contact"></span>
-				<span class="mui-tab-label">昵称</span>
+				<span class="mui-tab-label">幽默图片</span>
 			</router-link>
 			<router-link class="mui-tab-item-add" to="/car">
 				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge" id ='badge'>{{$store.getters.getallcount}}</span></span>
@@ -122,4 +127,6 @@ body{ background-color: #ffffff;}
     text-overflow: ellipsis;
 }
 .mint-header{z-index: 99 !important;}
+html{background: #ffffff;}
+
 </style>

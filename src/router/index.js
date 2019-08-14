@@ -5,7 +5,7 @@ import home from '@/components/home'
 Vue.use(Router)
 import shouye from '@/components/shouye'
 import car from '@/components/car'
-import huiyuan from '@/components/huiyuan'
+import tupian from '@/components/tupian'
 import search from '@/components/search'
 import newlist from '@/components/newlist'
 import newitem from '@/components/newitem'
@@ -18,6 +18,7 @@ import shopping from '@/components/shopping'
 import shoptuwen from '@/components/shoptuwen'
 import tianqi from '@/components/tianqi'
 import duanzi from '@/components/duanzi'
+import nicheng from '@/components/nicheng'
 export default new Router({
   routes: [
     {
@@ -33,8 +34,8 @@ export default new Router({
       component:shouye
     },
     {
-      path:'/huiyuan',
-      component:huiyuan
+      path:'/tupian',
+      component:tupian
     },
     {
       path:'/search',
@@ -86,6 +87,11 @@ export default new Router({
     {
       path:'/shouye/duanzi',
       component:duanzi
+
+    },
+    {
+      path:'/shouye/nicheng',
+      component:nicheng
 
     },
   ],

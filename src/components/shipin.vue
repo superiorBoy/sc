@@ -8,14 +8,14 @@
 
 
     <ul>
-      <li v-for="item in video">
+      <li v-for="item in video" >
           <div class="li_top"> 
                  <div>  <img :src="item.profile_image" alt="">   <div class="name">{{item.name}}</div>        </div>
                <div><span>{{item.passtime}}</span> </div>  
                    </div>
 <p>{{item.text}}</p>
 
-<video :src="item.videouri" controls="controls">
+<video :src="item.videouri" controls="controls" >
 您的浏览器不支持 video 标签。
 </video>
 
@@ -47,16 +47,16 @@ export default {
   data() {
     return {
       video: [],
-      page:1
+      page:1,
+      show:true
     };
   },
   methods: {
     getvideo() {
       this.$axios
-        .get("https://www.apiopen.top/satinApi?type=29&page="+this.page)
+        .get("https://www.apiopen.top/satinApi?type=4&page="+this.page)
         .then(res => {
           console.log(res.data.data);
-
           this.video = this.video.concat( res.data.data);
         })
         .catch(err => {
@@ -73,9 +73,39 @@ this.getvideo()
   },
   created() {
     this.getvideo();
+
   },
-  mounted() {}
+  mounted() {
+
+
+
+  },
+     updated:function(){
+          
+       var videos = document.getElementsByTagName('video');
+
+    console.log(videos.length)   
+            for (var i = videos.length - 1; i >= 0; i--) {
+                (function(){
+                    var p = i;
+                    videos[p].addEventListener('play',function(){
+                        pauseAll(p);
+                    })
+                })()
+            }
+            function pauseAll(index){
+                for (var j = videos.length - 1; j >= 0; j--) {
+                    if (j!=index) videos[j].pause();
+                }
+            };
+        },
 };
+
+
+
+
+
+
 </script>
 <style lang="scss" scoped>
 ul {
