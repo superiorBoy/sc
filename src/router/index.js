@@ -19,6 +19,7 @@ import shoptuwen from '@/components/shoptuwen'
 import tianqi from '@/components/tianqi'
 import duanzi from '@/components/duanzi'
 import nicheng from '@/components/nicheng'
+import login from '@/components/login'
 export default new Router({
   routes: [
     {
@@ -92,6 +93,11 @@ export default new Router({
     {
       path:'/shouye/nicheng',
       component:nicheng
+
+    },
+    {
+      path:'/shouye/login',
+      component:login
 
     },
   ],

@@ -40,7 +40,8 @@ export default {
   data() {
     return {
 name:'',
-music:[]
+music:[],
+
 
     };
   },
@@ -55,7 +56,8 @@ music:[]
         .catch(err => {
           console.log("获取失败");
         });
-    }
+    },
+
   },
 
   created() {
